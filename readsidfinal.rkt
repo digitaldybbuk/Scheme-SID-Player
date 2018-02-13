@@ -7,7 +7,7 @@
 
 
 ;;Open sid-dump file
-;(define SID-FILE (file->lines "iame.dmp"))
+;(define SID-FILE (file->lines "dmp/iame.dmp"))
 
 
 
@@ -183,7 +183,8 @@
   ;;freq of each voice 1 2 3...for 200 frames...lets test it
 
   (define (makeframe f)
-    
+  (define FRAMERATE 441)
+  
 ;    
 ;    ;Signals A B and C, the three voices
     
@@ -204,7 +205,7 @@
       0)
     
     ;;FRAMERATE is how many frames will contain each note in the SID FILE. 
-    (define FRAMERATE 441) ;
+    ;;(define FRAMERATE 441) ;
    
     (define AB  (signal-+s (list (rsound->signal/right (fun->mono-rsound FRAMERATE samplerate sigB))
                                  (rsound->signal/right (fun->mono-rsound FRAMERATE samplerate sigA))
@@ -232,10 +233,10 @@
 
   
   
-  (define SONG1 (file->lines "iame.dmp"))
-  (define SONG2 (file->lines "syncopated.dmp"))
-  (define SONG3 (file->lines "synthony.dmp"))
-  (define SONG4 (file->lines "alibi.dmp"))
+  (define SONG1 (file->lines "dmp/iame.dmp"))
+  (define SONG2 (file->lines "dmp/syncopated.dmp"))
+  (define SONG3 (file->lines "dmp/synthony.dmp"))
+  (define SONG4 (file->lines "dmp/alibi.dmp"))
 
   (define SID-FILE SONG1)
   (define EOF (string->number (second (string-split (last SID-FILE))))) ;last line frame number is EOF

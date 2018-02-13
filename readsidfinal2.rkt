@@ -7,7 +7,7 @@
 
 
 ;;Open sid-dump file
-(define SID-FILE (file->lines "storm.dmp"))
+(define SID-FILE (file->lines "dmp/storm.dmp"))
 ;(define SID-FILE '())
 
 (define (pad8 ls)
