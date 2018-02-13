@@ -3,6 +3,9 @@ Manuel F. Castillo
 Organization of Programming Languages
 Final Project - Emulating the Sid 6581
 
+
+![OPL Flyer for Project](http://www.cs.uml.edu/ecg/pub/uploads/OPLspr11/mfc-flyer.png)
+
 readsid.rkt - FINAL PROJECT SUBMISSION, and code that ran during presentation
 readsid2.rkt - my attempt at reading register 04 of the wavetable to select which exact waveform, and use of noise
 alibi.dmp - laxity's alibi in sid dmp format
