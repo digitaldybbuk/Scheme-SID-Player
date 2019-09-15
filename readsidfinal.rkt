@@ -181,7 +181,8 @@
     
 ;(define tunepart (map Freq (enumerate-interval 1 2999)))
   ;;freq of each voice 1 2 3...for 200 frames...lets test it
-
+  (define (silence t)
+      0)
   (define (makeframe f)
   (define FRAMERATE 441)
   
@@ -201,8 +202,6 @@
   (define (sigC t)
     (* 0.4 (pul (* t (third f) twopi sr/inv))))
 
-    (define (silence t)
-      0)
     
     ;;FRAMERATE is how many frames will contain each note in the SID FILE. 
     ;;(define FRAMERATE 441) ;
